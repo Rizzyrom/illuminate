@@ -10,15 +10,15 @@ export async function GET() {
     
     return NextResponse.json({
       maintenanceMode: settings.site?.maintenanceMode === true,
-      message: settings.site?.maintenanceMessage || 'Under maintenance',
-      returnDate: settings.site?.maintenanceReturnDate
+      maintenanceMessage: settings.site?.maintenanceMessage || 'Under maintenance',
+      maintenanceReturnDate: settings.site?.maintenanceReturnDate || '2025-09-30T07:00:00.000Z'
     });
   } catch (error) {
     console.error('Error reading maintenance settings:', error);
     return NextResponse.json({
       maintenanceMode: false,
-      message: 'Under maintenance',
-      returnDate: null
+      maintenanceMessage: 'Under maintenance',
+      maintenanceReturnDate: '2025-09-30T07:00:00.000Z'
     });
   }
 }

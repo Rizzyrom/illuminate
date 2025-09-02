@@ -11,7 +11,14 @@ interface MaintenancePageProps {
 export default function MaintenancePage({ data }: MaintenancePageProps) {
   const formatDate = (dateString: string) => {
     try {
+      if (!dateString) return 'Soon';
       const date = new Date(dateString);
+      
+      // Check if the date is valid
+      if (isNaN(date.getTime())) {
+        return 'Soon';
+      }
+      
       return date.toLocaleDateString('en-US', {
         weekday: 'long',
         year: 'numeric',
@@ -21,7 +28,8 @@ export default function MaintenancePage({ data }: MaintenancePageProps) {
         minute: '2-digit',
         timeZoneName: 'short'
       });
-    } catch {
+    } catch (error) {
+      console.error('Date parsing error:', error);
       return 'Soon';
     }
   };
