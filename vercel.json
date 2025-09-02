@@ -1,0 +1,10 @@
+{
+  "buildCommand": "pnpm run build",
+  "devCommand": "pnpm run dev",
+  "installCommand": "pnpm install",
+  "env": {
+    "NEXT_PUBLIC_TINA_CLIENT_ID": "52f0cde2-7def-41ac-8ad4-2ffbacdfc38e",
+    "TINA_TOKEN": "a3147fcfe6bbbebbf7a08c5997cd968e06286232",
+    "NEXT_PUBLIC_TINA_BRANCH": "main"
+  }
+}
