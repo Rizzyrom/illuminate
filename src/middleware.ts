@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
   
   // Always allow admin routes (TinaCMS admin interface)
@@ -24,7 +24,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Check maintenance mode via environment variable (set by deployment or manual config)
+  // Check maintenance mode from environment (faster than file reads)
   const maintenanceEnabled = process.env.MAINTENANCE_MODE === 'true';
   
   if (maintenanceEnabled) {
