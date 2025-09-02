@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
@@ -7,6 +7,7 @@ import Process from "../components/Process";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import MaintenancePage from "../components/MaintenancePage";
 
 // SECURITY: Static data only - NO TinaCMS client access for public visitors
 const staticPageData = {
@@ -116,7 +117,28 @@ const staticPageData = {
 };
 
 export default function Home() {
+  const [maintenanceMode, setMaintenanceMode] = useState(false);
+  const [maintenanceData, setMaintenanceData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
+    // Check maintenance mode from API
+    const checkMaintenanceMode = async () => {
+      try {
+        const response = await fetch('/api/maintenance');
+        const data = await response.json();
+        setMaintenanceMode(data.maintenanceMode);
+        setMaintenanceData(data);
+      } catch (error) {
+        console.error('Error checking maintenance mode:', error);
+        setMaintenanceMode(false);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    checkMaintenanceMode();
+
     // Header scroll effect
     const handleScroll = () => {
       const header = document.querySelector('header');
@@ -132,6 +154,23 @@ export default function Home() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="text-2xl font-bold mb-4" style={{ color: "var(--gold)" }}>
+            Loading...
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Show maintenance page if maintenance mode is enabled
+  if (maintenanceMode && maintenanceData) {
+    return <MaintenancePage data={{ site: maintenanceData }} />;
+  }
 
   return (
     <div className="min-h-screen">
