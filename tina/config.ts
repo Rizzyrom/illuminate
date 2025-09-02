@@ -15,6 +15,8 @@ export default defineConfig({
   // Get this from tina.io
   token: process.env.TINA_TOKEN,
 
+  // SECURITY: TinaCMS will handle authentication through TinaCloud
+
   build: {
     outputFolder: "admin",
     publicFolder: "public",
