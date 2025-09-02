@@ -1,0 +1,31 @@
+{
+  "name": "illuminate-avenue-cms",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"next dev --turbopack --port=7001\"",
+    "build": "tinacms build && next build",
+    "start": "next start",
+    "lint": "eslint",
+    "tina:dev": "tinacms dev -c \"next dev --turbopack\"",
+    "tina:build": "tinacms build"
+  },
+  "dependencies": {
+    "@tinacms/cli": "^1.10.2",
+    "next": "15.5.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "tinacms": "^2.8.2"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

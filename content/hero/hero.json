@@ -1,0 +1,25 @@
+{
+  "badge": "Shining a Light on Businesses",
+  "title": "We illuminate the path to exponential growth",
+  "subtitle": "20+ years orchestrating transformative marketing strategies for global brands. No cookie-cutter solutions. No empty promises. Just strategic brilliance that delivers measurable impact.",
+  "stats": [
+    {
+      "number": "$1B+",
+      "label": "Revenue Generated"
+    },
+    {
+      "number": "20+",
+      "label": "Years Experience"
+    },
+    {
+      "number": "Elite",
+      "label": "Industry Experts"
+    }
+  ],
+  "cta": {
+    "primaryText": "Start Your Transformation",
+    "primaryLink": "#contact",
+    "secondaryText": "View Case Studies",
+    "secondaryLink": "work.html"
+  }
+}

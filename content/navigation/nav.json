@@ -1,0 +1,29 @@
+{
+  "logo": "Illuminate Avenue",
+  "menuItems": [
+    {
+      "label": "Strategy",
+      "href": "strategy.html"
+    },
+    {
+      "label": "Work",
+      "href": "work.html"
+    },
+    {
+      "label": "Services",
+      "href": "services.html"
+    },
+    {
+      "label": "About",
+      "href": "about.html"
+    },
+    {
+      "label": "Insights",
+      "href": "insights.html"
+    }
+  ],
+  "cta": {
+    "text": "Connect With Us",
+    "href": "#contact"
+  }
+}

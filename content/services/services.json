@@ -1,0 +1,73 @@
+{
+  "badge": "Strategic Capabilities",
+  "title": "Beyond campaigns. We architect empires.",
+  "subtitle": "We don't just run ads. We architect comprehensive marketing ecosystems that drive sustainable growth at enterprise scale.",
+  "serviceList": [
+    {
+      "name": "Strategy",
+      "subtitle": "Executive Team Advisory",
+      "description": "Executive advisory for marketing transformation. We align your entire marketing ecosystem with business objectives.",
+      "features": [
+        "Executive strategy sessions",
+        "Market opportunity analysis",
+        "Competitive positioning",
+        "Growth roadmap development"
+      ]
+    },
+    {
+      "name": "Brand Renaissance",
+      "subtitle": "Complete Brand Evolution",
+      "description": "Complete brand evolution from strategy to execution. Position your brand for market leadership.",
+      "features": [
+        "Brand strategy & architecture",
+        "Visual identity systems",
+        "Voice & messaging frameworks",
+        "Market positioning"
+      ]
+    },
+    {
+      "name": "Experience Architecture",
+      "subtitle": "Digital Transformation Projects",
+      "description": "Architect integrated digital experiences that convert at every touchpoint across the customer journey.",
+      "features": [
+        "Customer journey mapping",
+        "MarTech stack optimization",
+        "Omnichannel orchestration",
+        "Experience optimization"
+      ]
+    },
+    {
+      "name": "Growth Engine Optimization",
+      "subtitle": "Revenue System Redesign",
+      "description": "Design and optimize the entire revenue engine from lead generation through customer retention.",
+      "features": [
+        "Revenue model optimization",
+        "Sales & marketing alignment",
+        "Conversion rate optimization",
+        "Customer lifetime value"
+      ]
+    },
+    {
+      "name": "Intelligence-Led Growth",
+      "subtitle": "Analytics & Optimization Programs",
+      "description": "Transform data into competitive advantage with advanced analytics and predictive modeling.",
+      "features": [
+        "Advanced analytics setup",
+        "Predictive modeling",
+        "Performance dashboards",
+        "ROI optimization"
+      ]
+    },
+    {
+      "name": "AI & Automation Integration",
+      "subtitle": "Future-Forward Marketing Systems",
+      "description": "Implement cutting-edge AI and automation solutions to scale your marketing operations while maintaining personalized customer experiences.",
+      "features": [
+        "AI-powered personalization",
+        "Marketing automation workflows",
+        "Predictive customer analytics",
+        "Intelligent content optimization"
+      ]
+    }
+  ]
+}
