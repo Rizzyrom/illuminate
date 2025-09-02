@@ -9,11 +9,10 @@ const branch =
 
 export default defineConfig({
   branch,
-
-  // Get this from tina.io
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  // Get this from tina.io
-  token: process.env.TINA_TOKEN,
+  
+  // TinaCloud configuration
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "52f0cde2-7def-41ac-8ad4-2ffbacdfc38e",
+  token: process.env.TINA_TOKEN || "a3147fcfe6bbbebbf7a08c5997cd968e06286232",
 
   // SECURITY: TinaCMS will handle authentication through TinaCloud
 
